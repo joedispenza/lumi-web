@@ -1,0 +1,19 @@
+{
+  "name": "lumi",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.96.0",
+    "vite": "^7.2.4"
+  },
+  "dependencies": {
+    "cobe": "^0.6.5",
+    "gsap": "^3.14.1"
+  }
+}

@@ -1,0 +1,196 @@
+/* About Page Hero Section - Preply Style */
+.section-about-hero {
+  display: flex;
+  height: 90vh;
+  min-height: 70rem;
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.about-hero__image-col {
+  flex: 0 0 45%;
+  position: relative;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.about-hero__image-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-hero__overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.about-hero__overlay-text span {
+  font-size: 8rem;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.05);
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
+
+.about-hero__content-col {
+  flex: 1;
+  padding: 10rem 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.about-hero__text-box {
+  max-width: 60rem;
+}
+
+.about-hero__headline {
+  font-size: 8rem;
+  font-weight: 800;
+  line-height: 0.95;
+  color: #000;
+  letter-spacing: -3px;
+  margin-bottom: 4.8rem;
+}
+
+.about-hero__subtext {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: #666;
+  max-width: 40rem;
+}
+
+.about-hero__logo-box {
+  margin-top: 6.4rem;
+}
+
+.logo-placeholder {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ddd;
+}
+
+/* Ticker Tape */
+.ticker-tape {
+  background-color: var(--color-black);
+  padding: 1.6rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.ticker-content {
+  display: flex;
+  white-space: nowrap;
+  gap: 4rem;
+  animation: ticker 40s linear infinite;
+}
+
+.ticker-content span {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-white);
+  letter-spacing: 2px;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Vision & Details */
+.about-vision-details {
+  padding: var(--spacing-4xl) 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  background-color: var(--color-bg); /* Dark transition */
+  color: var(--color-text);
+}
+
+.about-tiny-label {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2.4rem;
+}
+
+.vision-statement {
+  font-size: 5.4rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  color: var(--color-text);
+}
+
+.vision-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  justify-content: center;
+}
+
+.value-item-refined {
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+  padding-left: 3.2rem;
+}
+
+.value-header {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 1.6rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.value-header ion-icon {
+  font-size: 2.4rem;
+}
+
+.value-item-refined p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 59em) {
+  .section-about-hero {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .about-hero__image-col {
+    height: 40rem;
+  }
+  
+  .about-hero__content-col {
+    padding: 6.4rem 3.2rem;
+  }
+  
+  .about-hero__headline {
+    font-size: 5.4rem;
+  }
+  
+  .about-vision-details {
+    grid-template-columns: 1fr;
+    gap: 4.8rem;
+  }
+}

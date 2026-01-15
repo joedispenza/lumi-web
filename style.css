@@ -1,0 +1,69 @@
+body {
+  overflow-x: hidden;
+}
+
+
+/* Unique page styles and overrides */
+
+/* News & Insights Specific */
+.news-divider {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: 8rem 4.8rem;
+}
+
+
+.news-divider__content {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.news-divider__heading {
+  font-size: 5.2rem;
+  line-height: 0.9;
+  letter-spacing: -1px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 4.8rem;
+}
+
+/* Investment Programmes Specific */
+.tier-card--platinum .tier-card__header {
+  background: linear-gradient(135deg, #e5e4e2 0%, #ffffff 50%, #b4b4b4 100%);
+  color: #333;
+}
+.tier-card--gold .tier-card__header {
+  background: linear-gradient(135deg, #ffd700 0%, #fff8e1 50%, #b8860b 100%);
+  color: #333;
+}
+.tier-card--silver .tier-card__header {
+  background: linear-gradient(135deg, #c0c0c0 0%, #ffffff 50%, #808080 100%);
+  color: #333;
+}
+
+/* About Page Specific */
+.about-hero__headline {
+  font-size: 8rem;
+  font-weight: 800;
+  line-height: 0.95;
+  color: #000;
+  letter-spacing: -3px;
+  margin-bottom: 4.8rem;
+}
+
+.vision-statement {
+  font-size: 5.4rem;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  color: #000;
+}
+
+

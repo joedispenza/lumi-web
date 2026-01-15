@@ -1,0 +1,169 @@
+.section-logos {
+  background-color: #f8f8f8;
+  padding: var(--spacing-sm) 0 var(--spacing-xl);
+  overflow: hidden;
+  border-top: 1px solid #ddd;
+}
+
+.logos-label-container {
+  margin-bottom: var(--spacing-sm);
+}
+
+.logos-tiny-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.logos-grid-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.logos-row {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+
+.logos-row--bottom {
+  border-bottom: none;
+}
+
+.logos-track {
+  display: flex;
+  width: max-content;
+}
+
+/* Animations */
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.logos-track--left {
+  animation: scrollLeft 30s linear infinite;
+}
+
+.logos-track--right {
+  animation: scrollRight 30s linear infinite;
+}
+
+/* Pause on hover */
+.logos-row:hover .logos-track {
+  animation-play-state: paused;
+}
+
+.logo-item {
+  position: relative;
+  width: 33.33vw; /* top row has 3 items visible */
+  height: 28rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #eee;
+  cursor: pointer;
+  background-color: transparent;
+  overflow: hidden; /* For the filter sliding in */
+}
+
+.logos-row--bottom .logo-item {
+  width: 14.28vw; /* bottom row has 7 items visible */
+  height: 18rem;
+}
+
+.logo-inner {
+  position: relative;
+  z-index: 2; /* Sits above the filter */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+/* Base Filter Style */
+.logo-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Top Row: Filter slides from Bottom to Top */
+.logos-row--top .logo-item::before {
+  bottom: 0;
+  transform: translateY(100%);
+}
+
+.logos-row--top .logo-item:hover::before {
+  transform: translateY(0);
+}
+
+/* Bottom Row: Filter slides from Top to Bottom */
+.logos-row--bottom .logo-item::before {
+  top: 0;
+  transform: translateY(-100%);
+}
+
+.logos-row--bottom .logo-item:hover::before {
+  transform: translateY(0);
+}
+
+.logo-placeholder {
+  font-weight: 800;
+  font-size: 2.4rem;
+  color: #111;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+}
+
+.logos-grid-row--top .logo-placeholder {
+  font-size: 3.2rem;
+}
+
+/* Hover effects for logos */
+.logo-item:hover .logo-placeholder {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.logo-item:hover svg path,
+.logo-item:hover svg circle,
+.logo-item:hover svg ellipse {
+  fill: #fff !important;
+  stroke: #fff !important;
+  transition: all 0.4s ease;
+}
+
+.logo-item:hover svg g {
+  stroke: #fff !important;
+  transition: all 0.4s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  .logo-item {
+    width: 50vw;
+    height: 20rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-item {
+    width: 60vw;
+  }
+}

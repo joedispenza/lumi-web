@@ -1,0 +1,1128 @@
+/* section-investment.css - EDITORIAL OVERHAUL */
+
+/* --- 1. HERO: The Visionary Introduction (Alt) --- */
+.invest-hero-alt {
+  background-color: #000 !important; /* Force dark theme */
+  padding: 12rem 0 0rem;
+  color: #fff !important;
+}
+
+.hero-alt-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 2rem;
+}
+
+.hero-alt-header {
+  grid-column: 1 / 13;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 2rem;
+}
+
+.hero-alt-title {
+  font-size: 8rem;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+}
+
+.accent-icon {
+  font-weight: 400;
+  display: inline-block;
+  transform: translateY(-0.5rem);
+  color: var(--color-primary);
+}
+
+.hero-alt-desc-box {
+  text-align: right;
+}
+
+.hero-alt-sub {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-primary);
+}
+
+.hero-alt-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.hero-alt-image-box {
+  grid-column: 1 / 13;
+  height: 60rem;
+  overflow: hidden;
+}
+
+.hero-alt-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(40%) contrast(1.1);
+}
+
+.hero-alt-cta-box {
+  grid-column: 9 / 13;
+  background-color: #1a1a1a;
+  color: var(--color-white);
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -12rem;
+  z-index: 15;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cta-mini-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.cta-arrow-circle {
+  width: 6rem;
+  height: 6rem;
+  border: 1px solid var(--color-white);
+  /* RE-CHECK: User said "Carré" literally everywhere, let's make it a square or circle carefully. 
+     In the inspiration it's a circle. But let's stick to editorial square for the box. circle for icon is usually fine.
+     Actually, let's make it a square border for maximum consistency. */
+  border-radius: 0; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  align-self: flex-end;
+  transition: all 0.3s;
+}
+
+.cta-arrow-circle:hover {
+  background-color: var(--color-primary);
+  color: #000;
+  border-color: var(--color-primary);
+}
+
+@media (max-width: 59em) {
+  .hero-alt-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .hero-alt-title {
+    font-size: 4.8rem;
+  }
+  
+  .hero-alt-desc-box {
+    text-align: left;
+  }
+  
+  .hero-alt-cta-box {
+    grid-column: 1 / 13;
+    margin-top: 0;
+  }
+}
+
+/* --- 2. SECONDARY NAV: Programme Selection --- */
+.invest-nav-secondary {
+  background-color: #000 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 8rem 0;
+  color: #fff;
+  text-align: center;
+}
+
+.nav-secondary-title {
+  font-size: 4.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 4.8rem;
+  color: var(--color-white);
+}
+
+.nav-secondary-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 3.2rem;
+}
+
+.nav-item {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.nav-item:hover, .nav-item.active {
+  color: var(--color-primary);
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -3.2rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+/* --- 2. LSPP: The Membership (Fashion Editorial) --- */
+.section-lspp {
+  padding: 16rem 0;
+  background-color: var(--color-bg);
+}
+
+.lspp-header-editorial {
+  text-align: center;
+  margin-bottom: 12rem;
+}
+
+.lspp-header-editorial .heading-secondary {
+  font-size: 4.8rem;
+  letter-spacing: -1px;
+}
+
+.membership-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Continuous flow */
+}
+
+.membership-item {
+  position: relative;
+  padding: 8rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: all 0.5s ease;
+  cursor: default;
+}
+
+.membership-item:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.membership-item:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+  padding-left: 2rem; /* Subtle shift */
+}
+
+.membership-tier {
+  font-size: 6.4rem;
+  font-weight: 800;
+  color: #333; /* Default dark */
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  transition: color 0.4s ease;
+  flex: 0 0 40%;
+}
+
+.membership-item:hover .membership-tier {
+  color: var(--color-white);
+}
+
+.membership-details {
+  flex: 0 0 50%;
+}
+
+.membership-benefits {
+  list-style: none;
+  font-size: 2rem;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin-bottom: 3.2rem;
+}
+
+.membership-link {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.4rem;
+  transition: all 0.3s;
+}
+
+.membership-link:hover {
+  border-bottom-color: var(--color-primary);
+}
+
+/* --- 3. LDIB: The Bond (Cinematic Data Viz) --- */
+.section-ldib {
+  padding: 18rem 0;
+  background-color: #0b0b0b; /* Deep void black */
+  position: relative;
+  overflow: hidden;
+}
+
+.ldib-viz-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+.ldib-label-group {
+  flex: 0 0 30%;
+}
+
+.ldib-title-large {
+  font-size: 5.4rem;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1;
+  margin-bottom: 2.4rem;
+}
+
+.ldib-desc-minimal {
+  font-size: 1.8rem;
+  color: var(--color-text-muted);
+  max-width: 40rem;
+}
+
+.ldib-data-display {
+  display: flex;
+  gap: 8rem;
+}
+
+.data-point {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.data-number {
+  font-size: 14rem; /* Massive Swiss numbers */
+  font-weight: 200; /* Thin weight */
+  color: var(--color-primary); 
+  font-variant-numeric: tabular-nums;
+  line-height: 0.8;
+  letter-spacing: -6px;
+}
+
+.data-label {
+  font-size: 1.6rem;
+  color: var(--color-white);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 1.6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 1.6rem;
+  display: inline-block;
+}
+
+/* --- 4. LTIF: The Future (Magazine Asymmetry) --- */
+.section-ltif {
+  padding: 16rem 0;
+  background-color: var(--color-bg);
+  overflow: hidden;
+}
+
+.ltif-magazine-layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2.4rem;
+  align-items: center; /* Center horizontally for some items */
+}
+
+/* --- LTIF (Innovation & Venture) - Hanssen Refinement --- */
+.section-ltif-h {
+  padding-bottom: 16rem;
+}
+
+.ltif-h-header {
+  margin-bottom: 6.4rem;
+}
+
+/* --- 4.1. Why Invest (Simplified) --- */
+.section-why-invest {
+  padding: 16rem 0;
+  background-color: var(--color-black);
+}
+
+.why-invest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6.4rem;
+}
+
+.why-invest-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.why-invest-icon {
+  font-size: 4.8rem;
+  color: var(--color-primary);
+}
+
+.why-invest-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.2;
+}
+
+.why-invest-text {
+  font-size: 1.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 59em) {
+  .invest-hero__title { font-size: 4.8rem; }
+  .membership-item { flex-direction: column; gap: 2rem; }
+  .membership-tier { font-size: 4.8rem; }
+  .ldib-viz-container { flex-direction: column; gap: 6rem; align-items: flex-start; }
+  .data-number { font-size: 10rem; }
+  .ltif-magazine-layout { display: flex; flex-direction: column; gap: 4rem; }
+  .ltif-article--offset, .ltif-article--wide { margin-top: 0; width: 100%; }
+}
+
+/* --- 5. WHO CAN INVEST: The Architect's Qualification --- */
+/* --- 5. WHO CAN INVEST: The Architect's Qualification --- */
+.section-who-invests {
+  padding: 14rem 0;
+  background-color: #151515; /* Slightly lighter than pure black */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.who-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.who-header {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.who-sub {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 1.6rem;
+}
+
+.who-title {
+  font-size: 4.8rem;
+  font-weight: 800;
+  color: var(--color-white);
+  letter-spacing: -1px;
+}
+
+.who-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+  list-style: none;
+}
+
+.who-item {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 4.8rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.who-item::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 0%; height: 2px;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.who-item:hover {
+  background-color: #212121;
+  transform: translateY(-0.5rem);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.who-item:hover::after {
+  width: 100%;
+}
+
+.who-icon {
+  font-size: 3.2rem;
+  color: var(--color-primary);
+  margin-bottom: 2.4rem;
+  display: block;
+}
+
+.who-text h4 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.who-text p {
+  font-size: 1.6rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 59em) {
+  .who-list { grid-template-columns: 1fr; }
+  .who-item { padding: 3.2rem; }
+}
+
+/* --- 6. CEO MESSAGE & INVESTOR QUALIFICATIONS --- */
+.section-ceo-investor {
+  padding: 16rem 0;
+  background-color: var(--color-black);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ceo-message-box {
+  padding-right: 8rem;
+}
+
+.ceo-image-container {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin: 4.8rem 0;
+}
+
+.ceo-image-placeholder {
+  width: 12rem;
+  height: 12rem;
+  background-color: #333;
+  /* No border radius - Carré */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ceo-image-placeholder::after {
+  content: 'CEO';
+  font-size: 1.2rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.ceo-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ceo-role {
+  font-size: 1.4rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: 0.4rem;
+}
+
+.ceo-quote {
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  font-style: italic;
+  border-left: 2px solid var(--color-primary);
+  padding-left: 3.2rem;
+}
+
+/* Who This Is For Box */
+.who-is-for-box {
+  background-color: #111;
+  padding: 6.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.who-is-for-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+}
+
+.who-is-for-desc {
+  font-size: 1.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 4.8rem;
+  line-height: 1.6;
+}
+
+.who-is-for-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-bottom: 4.8rem;
+}
+
+.who-is-for-item {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  font-size: 1.6rem;
+  color: var(--color-white);
+  line-height: 1.4;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.who-is-for-item:last-child {
+  border-bottom: none;
+}
+
+.who-is-for-icon {
+  font-size: 2.4rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.who-cta-box {
+  margin-top: 3.2rem;
+}
+
+@media (max-width: 59em) {
+  .section-ceo-investor .grid--2-cols {
+    grid-template-columns: 1fr;
+    gap: 8rem;
+  }
+  
+  .ceo-message-box {
+    padding-right: 0;
+  }
+  
+  .who-is-for-box {
+    padding: 3.2rem;
+  }
+}
+
+/* --- 7. WHY INVEST WITH LUMIFRIK (Hanssen Inspiration) --- */
+.section-hanssen {
+  padding: 16rem 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.hanssen-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr;
+  gap: 2.4rem;
+  align-items: stretch;
+}
+
+.hanssen-main-img {
+  height: 70rem;
+}
+
+.hanssen-center-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.hanssen-text-box {
+  padding: 4.8rem;
+  background-color: #111;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hanssen-title {
+  font-size: 4.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  line-height: 1;
+  margin-bottom: 2.4rem;
+}
+
+.hanssen-paragraph {
+  font-size: 1.6rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.hanssen-secondary-img {
+  height: 30rem;
+}
+
+.hanssen-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.meta-item {
+  padding: 2.4rem;
+  background-color: #111;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meta-label {
+  font-size: 1.2rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.meta-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.image-placeholder-square {
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.placeholder-label {
+  font-size: 1.2rem;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 59em) {
+  .hanssen-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hanssen-main-img {
+    height: 40rem;
+    order: 2;
+  }
+  
+  .hanssen-center-col {
+    order: 1;
+  }
+  
+  .hanssen-sidebar {
+    order: 3;
+  }
+}
+/* --- 8. WHY INVEST WITH LUMIFRIK (Simple Editorial) --- */
+.section-why-invest-simple {
+  padding: 16rem 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.paragraph-large {
+  font-size: 2.4rem;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+  margin: 3.2rem 0 4.8rem;
+}
+
+.why-simple-img {
+  height: 50rem;
+}
+
+@media (max-width: 59em) {
+  .section-why-invest-simple .grid--2-cols {
+    grid-template-columns: 1fr;
+    gap: 6.4rem;
+  }
+}
+
+/* --- 9. INVESTOR RELATIONS HUB (Strategic Hub) --- */
+.section-ir-hub {
+  padding: 16rem 0;
+  background-color: var(--color-black);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ir-hub-header {
+  text-align: center;
+  margin-bottom: 8.4rem;
+}
+
+.ir-hub-intro {
+  font-size: 2rem;
+  color: var(--color-text-muted);
+  max-width: 60rem;
+  margin: 2.4rem auto 0;
+  line-height: 1.6;
+}
+
+/* Zone 1: Bento Grid */
+.ir-bento-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 0.8fr;
+  gap: 2.4rem;
+  margin-bottom: 8rem;
+}
+
+.ir-bento-item {
+  background-color: #111;
+  padding: 4rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.bento-highlights {
+  justify-content: space-between;
+}
+
+.bento-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-white);
+  margin-bottom: 3.2rem;
+}
+
+.bento-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3.2rem;
+}
+
+.bento-list li {
+  font-size: 1.4rem;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.pulse-icon {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+  /* No radius - Carré */
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+.bento-media {
+  grid-column: 2;
+  justify-content: space-between;
+  background-color: #151515;
+}
+
+.bento-tag {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 1.6rem;
+}
+
+.bento-title-large {
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--color-white);
+  margin-bottom: 2.4rem;
+}
+
+.bento-desc {
+  font-size: 1.6rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  max-width: 32rem;
+}
+
+.btn-see-more {
+  margin-top: 3.2rem;
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-primary);
+  align-self: flex-start;
+  padding-bottom: 4px;
+}
+
+.bento-pulse {
+  background-color: #0c0c0c;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pulse-number {
+  font-size: 6.4rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  display: block;
+}
+
+.pulse-label {
+  font-size: 1.4rem;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.pulse-desc {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 1.6rem;
+}
+
+/* Zone 2: Archive & Governance */
+.ir-archive-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  padding-top: 8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 12rem;
+}
+
+.archive-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4.8rem;
+}
+
+.document-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.document-item {
+  display: flex;
+  align-items: center;
+  padding: 2.4rem;
+  background-color: #111;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 2.4rem;
+  transition: all 0.3s;
+}
+
+.document-item:hover {
+  background-color: #1a1a1a;
+  border-color: var(--color-primary);
+}
+
+.doc-icon {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.doc-info {
+  flex-grow: 1;
+}
+
+.doc-name {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.doc-meta {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+.doc-download {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  border: 1px solid var(--color-primary);
+  padding: 8px 16px;
+  transition: all 0.3s;
+}
+
+.doc-download:hover {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+}
+
+.repository-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+.repo-card {
+  display: block;
+  padding: 2.4rem;
+  background-color: #111;
+  border-left: 4px solid var(--color-primary);
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.repo-card:hover {
+  transform: translateX(10px);
+  background-color: #1a1a1a;
+}
+
+.repo-year {
+  font-size: 1.2rem;
+  color: #666;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.repo-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 4px;
+}
+
+.repo-type {
+  font-size: 1.4rem;
+  color: var(--color-text-muted);
+}
+
+/* Zone 3: Strategic Dialogue */
+.ir-advisory-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: start;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.faq-item {
+  background-color: #111;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.faq-question {
+  padding: 2.4rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-white);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 2.4rem;
+  color: var(--color-primary);
+}
+
+.faq-item[open] .faq-question::after {
+  content: '−';
+}
+
+.faq-answer {
+  padding: 0 2.4rem 2.4rem;
+  font-size: 1.6rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.ir-cta-banner {
+  background-color: #151515;
+  padding: 4.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ir-cta-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 1.6rem;
+}
+
+.ir-cta-text {
+  font-size: 1.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 4rem;
+  line-height: 1.6;
+}
+
+.ir-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.btn-text-white {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.btn-text-white:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 59em) {
+  .ir-bento-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ir-archive-split,
+  .ir-advisory-block {
+    grid-template-columns: 1fr;
+    gap: 6.4rem;
+  }
+}

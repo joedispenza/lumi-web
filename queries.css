@@ -1,0 +1,157 @@
+/**************************/
+/* BELOW 1344px (Smaller Desktops) */
+/**************************/
+@media (max-width: 84em) {
+  html {
+    font-size: 56.25%; /* 1rem = 9px */
+  }
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+  html {
+    font-size: 50%; /* 1rem = 8px */
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide navigation */
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+
+  /* Logo Slider */
+  .logos-row--top .logo-item {
+    width: 50vw;
+    height: 30rem;
+  }
+
+  .logos-row--bottom .logo-item {
+    width: 25vw;
+    height: 16rem;
+  }
+
+  /* Team Section */
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 6.4rem;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .footer-heading {
+    font-size: 4.4rem;
+  }
+
+  .footer-background-text {
+    font-size: 20rem;
+    bottom: -2rem;
+  }
+}
+
+/**************************/
+/* BELOW 704px (Smaller Tablets) */
+/**************************/
+
+@media (max-width: 44em) {
+  /* Logo Slider */
+  .logos-row--top .logo-item {
+    width: 50vw;
+    height: 25rem;
+  }
+
+  .logos-row--bottom .logo-item {
+    width: 33.33vw;
+    height: 14rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.4rem;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  html {
+    font-size: 43.75%; /* 1rem = 7px approx */
+  }
+
+  .header {
+    padding: 0 2.4rem;
+  }
+}

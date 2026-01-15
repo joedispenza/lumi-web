@@ -1,0 +1,92 @@
+.about-team-refined {
+  padding: var(--spacing-4xl) 0;
+  background-color: var(--color-bg);
+}
+
+.team-header-box {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.team-title-main {
+  font-size: 8rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -4px;
+  line-height: 0.9;
+}
+
+.team-grid-refined {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.2rem;
+}
+
+.team-member-col {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.team-member-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.img-placeholder-gray {
+  width: 100%;
+  height: 100%;
+  background-color: #252525;
+}
+
+.team-member-info-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 3.2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.member-name-refined {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.member-role-refined {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-primary); /* Gold accent */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Hover Effect */
+.team-member-col:hover .img-placeholder-gray {
+  background-color: #333;
+  transition: all 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 59em) {
+  .team-grid-refined {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 34em) {
+  .team-grid-refined {
+    grid-template-columns: 1fr;
+  }
+  
+  .team-title-main {
+    font-size: 5.4rem;
+    letter-spacing: -2px;
+  }
+}

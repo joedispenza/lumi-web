@@ -1,0 +1,192 @@
+.section-hero {
+  height: 140vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  background-color: #f0f0f0; /* Light gray background like the image */
+  padding-top: 8rem; /* Account for nav */
+}
+
+/* Area 1: Top Left - Title */
+.hero-title-area {
+  grid-column: 1 / 6;
+  grid-row: 1 / 5;
+  padding: var(--spacing-4xl) var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: transparent;
+}
+
+.hero-heading {
+  font-size: 6.6rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-black);
+  letter-spacing: -2px;
+  margin-bottom: var(--spacing-lg);
+  text-transform: none;
+}
+
+.hero-cta-box {
+  margin-top: auto;
+  padding-bottom: var(--spacing-xl);
+}
+
+/* Area 2: Top Center/Right - Main Image */
+.hero-image-main {
+  grid-column: 6 / 10;
+  grid-row: 1 / 5;
+  position: relative;
+  overflow: visible; /* For the floating box */
+}
+
+.hero-image-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Floating Gold Box */
+.hero-floating-box {
+  position: absolute;
+  left: -12rem;
+  bottom: 8rem;
+  width: 28rem;
+  background-color: var(--color-primary); /* Gold */
+  padding: var(--spacing-lg);
+  color: var(--color-black);
+  z-index: 10;
+  /* Visual match for the image's box */
+}
+
+.fb-number {
+  display: block;
+  font-size: 4.8rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: var(--spacing-xs);
+}
+
+.fb-label {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+}
+
+.fb-text {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* Area 3: Right Side - Vertical Info */
+.hero-side-info {
+  grid-column: 10 / 13;
+  grid-row: 1 / 5;
+  padding: var(--spacing-xl) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-info-text {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #666;
+  max-width: 15rem;
+}
+
+.stat-number {
+  display: block;
+  font-size: 4.8rem;
+  font-weight: 800;
+  color: var(--color-black);
+}
+
+.stat-label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #888;
+}
+
+/* Area 4: Bottom Left - Sub Image */
+.hero-image-bottom {
+  grid-column: 1 / 4;
+  grid-row: 5 / 7;
+}
+
+.hero-image-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Area 5: Bottom Center - Detailed Text */
+.hero-description-area {
+  grid-column: 4 / 9;
+  grid-row: 5 / 7;
+  padding: var(--spacing-xl);
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-subheading {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-black);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 1px;
+}
+
+.hero-paragraph {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 50rem;
+}
+
+/* Area 6: Bottom Right - Accent Shape */
+.hero-accent-shape {
+  grid-column: 9 / 13;
+  grid-row: 5 / 7;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.geometric-pattern {
+  width: 120%;
+  height: 120%;
+  background-color: var(--color-white);
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .hero-heading { font-size: 6.4rem; }
+  .hero-floating-box { left: -5rem; width: 24rem; }
+}
+
+@media (max-width: 900px) {
+  .section-hero {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-floating-box {
+    position: static;
+    width: 100%;
+    margin-top: -4rem;
+  }
+}
