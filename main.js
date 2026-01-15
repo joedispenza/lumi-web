@@ -1,4 +1,5 @@
 // Mobile navigation toggle
+import { initGlobe } from './globe.js';
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
 
@@ -104,7 +105,6 @@ if (sliderGrid && prevBtn && nextBtn) {
   // Initial update
   updateSlider();
 }
-import { initGlobe } from './globe.js';
 
 const container = document.getElementById('globe-container');
 
