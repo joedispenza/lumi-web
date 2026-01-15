@@ -1,10 +1,11 @@
 .section-created {
   padding-top: var(--spacing-md); /* Reduced from 4xl */
-  background-color: var(--color-white);
+  background-color: var(--color-bg);
 }
 
 .created-info {
   display: flex;
+  font-size: 2rem;
   justify-content: space-between;
   align-items: flex-end; /* Align to the bar better */
   margin-bottom: var(--spacing-md);
@@ -16,13 +17,13 @@
   font-size: var(--font-size-md);
   font-weight: 800;
   text-transform: uppercase;
-  color: var(--color-black);
   letter-spacing: 2px;
+  color: var(--color-primary)
 }
 
 .created-info-text {
-  font-size: var(--font-size-md);
-  color: #666;
+  font-size: 2rem;
+  color: var(--color-text-muted);
   max-width: 40rem;
   line-height: 1.5;
   text-align: right;
@@ -90,7 +91,7 @@
 }
 
 .created-about-text {
-  font-size: var(--font-size-md);
+  font-size: 2rem;
   line-height: 1.6;
   color: var(--color-text-muted);
   max-width: 80rem;

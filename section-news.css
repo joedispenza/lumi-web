@@ -62,12 +62,14 @@
 .news-hero-footer {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: start;
+  flex-direction: column;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 3.2rem;
 }
 
 .news-hero-desc {
+  padding-bottom: 6rem;
   font-size: 1.8rem;
   color: var(--color-text-muted);
   max-width: 40rem;
@@ -78,6 +80,7 @@
   background-color: var(--color-white);
   color: var(--color-black);
   padding: 1.6rem 3.2rem;
+  margin-top: 4rem;
   border-radius: 0; /* Updated to Carré aesthetic */
   font-size: 1.4rem;
   font-weight: 700;
@@ -174,13 +177,13 @@
 }
 
 .news-hanssen-card__year {
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   color: #999;
   letter-spacing: 1px;
 }
 
 .news-hanssen-card__tag {
-  font-size: 1.6rem;
+  font-size: 4.6rem;
   color: var(--color-primary);
 }
 

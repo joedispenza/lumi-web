@@ -93,6 +93,9 @@ body {
 .margin-bottom-md {
   margin-bottom: 6.8rem !important;
 }
+.margin-bottom-lg {
+  margin-bottom: 12.4rem !important;
+}
 
 .center-text {
   text-align: center;
