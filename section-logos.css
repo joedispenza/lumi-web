@@ -1,5 +1,5 @@
 .section-logos {
-  background-color: #f8f8f8;
+  background-color: var(--color-primary);
   padding: var(--spacing-sm) 0 var(--spacing-xl);
   overflow: hidden;
   border-top: 1px solid #ddd;

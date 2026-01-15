@@ -20,13 +20,17 @@
     <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="components.css" />
     <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="mobile-nav.css" />
     <link rel="stylesheet" href="section-hero.css" />
+    <link rel="stylesheet" href="features-section.css" />
+    <link rel="stylesheet" href="section-investment-cards.css" />
     <link rel="stylesheet" href="section-awesome.css" />
     <link rel="stylesheet" href="section-created.css" />
     <link rel="stylesheet" href="section-services.css" />
     <link rel="stylesheet" href="section-globe.css" />
     <link rel="stylesheet" href="section-logos.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./icon-font.css" />
 
     <link rel="stylesheet" href="section-automation.css" />
     <link rel="stylesheet" href="section-holdings.css" />
@@ -38,6 +42,43 @@
   </head>
 
   <body>
+    <!-- NEW MOBILE NAVIGATION -->
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+
+      <div class="navigation__background">&nbsp;</div>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="index.html" class="navigation__link"><span>01</span>Home</a>
+          </li>
+          <li class="navigation__item">
+            <a href="about.html" class="navigation__link"><span>02</span>About Lumifrik</a>
+          </li>
+          <li class="navigation__item">
+            <a href="lumi-exchange.html" class="navigation__link"><span>03</span>Subsidiaries</a>
+          </li>
+          <li class="navigation__item">
+            <a href="investment-programmes.html" class="navigation__link"><span>04</span>Investments</a>
+          </li>
+          <li class="navigation__item">
+            <a href="investor-impact.html" class="navigation__link"><span>05</span>Investor & Impact</a>
+          </li>
+          <li class="navigation__item">
+            <a href="news-insights.html" class="navigation__link"><span>06</span>News & Insights</a>
+          </li>
+          <li class="navigation__item">
+            <a href="invest.html" class="navigation__link"><span>07</span>Invest Now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <header class="header">
       <div class="nav-logo">
         <a href="index.html">
@@ -262,6 +303,108 @@
       </div>
     </section>
 
+    <section class="section-investment-programmes" id="investments">
+      <div class="u-center-text margin-bottom-lg">
+        <h2 class="heading-secondary center-text">Investment Programmes</h2>
+        <p class="subheading center-text">Join the future of African Finance</p>
+      </div>
+
+      <div class="investment-cards-grid">
+        <!-- 4.1 LSPP -->
+        <div class="inv-card">
+          <div class="inv-card__side inv-card__side--front">
+            <div class="inv-card__picture inv-card__picture--1">
+              &nbsp;
+            </div>
+            <h4 class="inv-card__heading">
+              <span class="inv-card__heading-span">Strategic Patrons</span>
+            </h4>
+            <div class="inv-card__details">
+              <ul>
+                <li>Elite Circle of Global Patrons</li>
+                <li>Platinum · Gold · Silver Tiers</li>
+                <li>Equity Access & Lifetime Recognition</li>
+                <li>Annual Summit Invitations</li>
+                <li>Exclusive Networking</li>
+              </ul>
+            </div>
+          </div>
+          <div class="inv-card__side inv-card__side--back inv-card__side--back-1">
+            <div class="inv-card__cta">
+              <div class="inv-card__price-box">
+                <p class="inv-card__price-only">Join The Elite</p>
+                <p class="inv-card__price-value">LSPP</p>
+                <p class="inv-card__desc">Become a Patron</p>
+              </div>
+              <a href="#" class="btn btn--white">Request Invitation</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.2 LDIB -->
+        <div class="inv-card">
+          <div class="inv-card__side inv-card__side--front">
+            <div class="inv-card__picture inv-card__picture--2">
+              &nbsp;
+            </div>
+            <h4 class="inv-card__heading">
+              <span class="inv-card__heading-span">Diaspora Bond</span>
+            </h4>
+            <div class="inv-card__details">
+              <ul>
+                <li>Tokenized Fixed-Income Bond</li>
+                <li>Sharia-Compliant Structure</li>
+                <li>6–9% Annual Yield Target</li>
+                <li>3–7 Year Tenor</li>
+                <li>Regulated & Transparent</li>
+              </ul>
+            </div>
+          </div>
+          <div class="inv-card__side inv-card__side--back inv-card__side--back-2">
+            <div class="inv-card__cta">
+              <div class="inv-card__price-box">
+                <p class="inv-card__price-only">Invest In Home</p>
+                <p class="inv-card__price-value">LDIB</p>
+                <p class="inv-card__desc">Empower Impact</p>
+              </div>
+              <a href="#" class="btn btn--white">Pre-register Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.3 LTIF -->
+        <div class="inv-card">
+          <div class="inv-card__side inv-card__side--front">
+            <div class="inv-card__picture inv-card__picture--3">
+              &nbsp;
+            </div>
+            <h4 class="inv-card__heading">
+              <span class="inv-card__heading-span">Innovation Fund</span>
+            </h4>
+            <div class="inv-card__details">
+              <ul>
+                <li>Deep-Tech Venture Fund</li>
+                <li>AI, Blockchain, Fintech Focus</li>
+                <li>Sovereign Cloud & E-Gov</li>
+                <li>Co-Fund with Global VCs</li>
+                <li>High-Growth Potential</li>
+              </ul>
+            </div>
+          </div>
+          <div class="inv-card__side inv-card__side--back inv-card__side--back-3">
+            <div class="inv-card__cta">
+              <div class="inv-card__price-box">
+                <p class="inv-card__price-only">Fuel The Future</p>
+                <p class="inv-card__price-value">LTIF</p>
+                <p class="inv-card__desc">Co-Invest Today</p>
+              </div>
+              <a href="#" class="btn btn--white">Submit Proposal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section-advisory">
       <div class="container">
         <div class="ad-header-grid">
@@ -342,13 +485,20 @@
         </div>
       </div>
     </section>
-              For over a decade, we've supported global clients with integrity
+    <h2 class="container heading-secondary text-center margin-bottom-md">
+
+              
+    For over a decade, we've supported global clients with integrity
               and a deep commitment to African prosperity.
+
+    </h2>
             </p>
           </div>
         </div>
       </div>
     </section>
+
+
 
     <section class="section-globe">
       <div class="globe-hud">
@@ -846,7 +996,45 @@
         </div>
       </div>
     </section>
+    <section class="section-features">
+      <div class="features-grid">
+        <div class="feature-box">
+          <i class="feature-box__icon icon-basic-world"></i>
+          <p class="feature-box__label">Global Reach</p>
+          <p class="feature-box__text">
+            Bridging capital between Africa and the GCC through a standardized
+            financial corridor.
+          </p>
+        </div>
 
+        <div class="feature-box">
+          <i class="feature-box__icon icon-basic-geolocalize-05"></i>
+          <p class="feature-box__label">Strategic Insights</p>
+          <p class="feature-box__text">
+            Deep market analysis to minimize risk and maximize returns for
+            institutional partners.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <i class="feature-box__icon icon-basic-gear"></i>
+          <p class="feature-box__label">Digital Innovation</p>
+          <p class="feature-box__text">
+            Leveraging blockchain and tokenization to unlock liquidity in emerging
+            markets.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <i class="feature-box__icon icon-basic-heart"></i>
+          <p class="feature-box__label">Sustainable Impact</p>
+          <p class="feature-box__text">
+            Empowering local communities and SMEs to achieve long-term economic
+            prosperity.
+          </p>
+        </div>
+      </div>
+    </section>
     <section class="section-holdings">
       <div class="container">
         <span class="subheading">Nos Holdings</span>
