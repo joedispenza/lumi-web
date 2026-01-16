@@ -79,7 +79,7 @@
   font-size: 35rem;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.03); /* very subtle */
-  text-transform: lowercase;
+  text-transform: capitalize;
   pointer-events: none;
   line-height: 0.8;
   letter-spacing: -2rem;
@@ -95,6 +95,11 @@
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
   z-index: 2;
+}
+.footer .logo {
+  width: 5rem;
+  height: 5rem;
+
 }
 
 .footer-social-icons {
