@@ -1,6 +1,6 @@
 // globe.js - Module pour initialiser le globe Cobe en vanilla JS
 
-import createGlobe from 'cobe';
+import createGlobe from 'https://esm.sh/cobe';
 
 export function initGlobe(containerElement, options = {}) {
   const { markers = [] } = options;

@@ -1,6 +1,6 @@
 // Mobile navigation toggle
 
-import createGlobe from 'cobe';
+import createGlobe from 'https://esm.sh/cobe';
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
 
